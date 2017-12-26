@@ -12,6 +12,7 @@
 
 <body>
     <div id="vue-app">
+        <!-- Data binding -->
         <h1>{{ greet('haha')}}</h1>
         <p>Name : {{name}}</p>
         <p>Job : {{job}}</p>
@@ -20,6 +21,9 @@
         <a :href="website">Naver</a>
         <input type="text" v-bind:value="name" />
         <p v-html="websiteTag"></p>
+        <!-- Data binding -->
+
+        <!-- Event -->
         <h2>Event</h2>
         <button v-on:click="age++">Add a Year</button>
         <button @:click="age--">Subtract a Year</button>
@@ -29,6 +33,7 @@
         <button v-on:dblclick="subtractAges(10)">Subtract 10 Years</button>
         <p>My age is {{age}}</p>
         <div id="canvas" v-on:mousemove="updateXY">{{x}}, {{y}}</div>
+        <!-- Event -->
     </div>
 
     <script src="app.js"></script>
