@@ -7,7 +7,13 @@ new Vue({
         websiteTag: '<a href="http://www.naver.com">Go Naver</a>',
         age: 40,
         x: 0,
-        y: 0
+        y: 0,
+        newName: '',
+        newAge: '',
+        a: 0,
+        b: 0,
+        available: false,
+        nearby: false
     },
     methods: {
         greet: function (say) {
@@ -30,6 +36,36 @@ new Vue({
 
             this.x = event.offsetX;
             this.y = event.offsetY;
+        },
+        logName: function () {
+            console.log("You entered your name.");
+        },
+        logAge: function () {
+            console.log("You entered your age.");
+        },
+        // addToA: function () {
+        //     console.log('addToA');
+        //     return this.a + this.age;
+        // },
+        // addToB: function () {
+        //     console.log('addToB');
+        //     return this.b + this.age;
+        // }
+    },
+    computed: {
+        addToA: function () {
+            console.log('addToA');
+            return this.a + this.age;
+        },
+        addToB: function () {
+            console.log('addToB');
+            return this.b + this.age;
+        },
+        compClasses: function () {
+            return {
+                available: this.available,
+                nearby: this.nearby
+            }
         }
     }
 });
