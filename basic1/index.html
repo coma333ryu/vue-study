@@ -81,6 +81,19 @@
             <span>Ryu</span>
         </div>
         <!-- Dynamic CSS -->
+
+        <!-- Conditionals -->
+        <h1>Conditionals</h1>
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+
+        <!-- <p v-if="error">There has been error.</p> -->
+        <!-- <p v-if="success">Success !!!</p> -->
+        <!-- <p v-else-if="success">Success !!!</p> -->
+
+        <p v-show="error">There has been error.</p>
+        <p v-show="success">Success !!!</p>
+        <!-- Conditionals -->
     </div>
 
     <script src="app.js"></script>
