@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Refs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+        <h2>Refs</h2>
+        <input type="text" ref="input" />
+        <button v-on:click="readRefs">Submit</button>
+        <p>{{output}}</p>
+        <div ref="divTest">This is Div.</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
